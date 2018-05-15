@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Flappy Tours</title>
+  <meta name="description" content="Relax playing the game Flappy Tours online, totally free and without publicity.">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/estilos.min.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112934282-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-112934282-1');
+  </script>
+
+</head>
+
+<body id="cuerpo">
+  <!-- Game container -->
+  <div id="div_juego"></div>
+
+  <!-- Loading overlay -->
+  <div id="loading" class="fullscreen">
+    <div class="fila1x" style="margin-top:20%;">
+      <img id="pato" class="centrado" src="assets/imagenes/logo.png" />
+    </div>
+    <div class="fila1x">
+      <p id="p_loading" class="txtblancosobrenegro centrado">Loading...</p>
+    </div>
+    <div class="fila1x">
+      <p id="p_carga" class="txtblancosobrenegro centrado"></p>
+    </div>
+  </div>
+
+  <!-- Inicio overlay -->
+  <div id="inicio" class="fullscreen">
+    <div class="fila05x" style="text-align:right">
+    </div>
+    <div class="fila2x">
+      <img id="pato" class="centrado animacionUpDown" src="img/background-logo.png" />
+    </div>    
+    <div id="botonera" style="margin-top:5%;">
+      <button class="btn centrado" onclick="botonPlay();">PLAY</button>
+      <button class="btn centrado" onclick="botonAyuda();">HELP</button>
+      <button class="btn centrado" onclick="botonCredits();">CREDITS</button>
+    </div>
+
+  </div>
+
+  <!-- Ingame overlay -->
+  <div id="enJuego" class="fullscreen">
+    <div class="fila1x">
+      <p id="marcador" class="centrado txtblancosobrenegro">0</p>
+    </div>
+  </div>
+
+  <!-- Gameover overlay-->
+  <div id="gameOver" class="fullscreen animacionPopUp">
+    <div class="fila05x"></div>
+    <div class="fila05x">
+      <p id="p_gameover" class="centrado txtblancosobrenegro">GAME OVER</p>
+    </div>
+    <div class="fila025x">
+      <p class="centrado txtverdesobreblanco txtsize4vh">SCORE</p>
+    </div>
+    <div class="fila05x">
+      <p id="recuento" class="centrado txtblancosobrenegro"></p>
+    </div>
+    <div class="fila025x">
+      <p class="centrado txtverdesobreblanco txtsize4vh">YOUR BEST</p>
+    </div>
+    <div class="fila05x">
+      <p id="bestscore" class="centrado txtblancosobrenegro"></p>
+    </div>
+    <div class="fila025x">
+      <p id="mensaje" class="centrado txtnegrosobreblanco"></p>
+    </div>
+  </div>
+<!-- Credits overlay -->
+<div id="creditos" onclick="cerrarlayer()" class="fullscreen" style="background-color:#00b698; text-align:center;">
+    
+    <div class="fila025x"></div>
+    <div style="display:inline-block">
+      <h2>DEVELOPED BY</h2>
+      <p>Juan Jos&eacute Capell&aacuten<br/>soycape@hotmail.com<br/></p>
+      <h2>ATTRIBUTIONS</h2>
+        
+              <p>Backgroung music "Pleasant Creek" by Matthew Pablo.<!--(<a href="https://opengameart.org/users/matthewpablo" target="_blank">Source</a>)--><br/>
+                License: <!--<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">-->CC-BY-3.0</p>
+                <hr/>    
+                <p>Bird character (Flappy Duck sprite) by <!--<a href="https://bevouliin.com/" target="_blank">-->bevouliin.com.<br/>
+                License: <!--<a href="http://static.opengameart.org/OGA-BY-3.0.txt" target="_blank">-->OGA-BY-3.0</p>
+                <hr/>
+                <p>Powered by<!--<a href="http://phaser.io" target="_blank">--> Phaser.io</p>            
+    </div>
+  </div>
+
+<!-- Help overlay -->
+<div id="help" class="fullscreen centrado" onclick="cerrarayuda()">
+  <div>
+    <br/>
+    <h2 id="title_instrucciones">HOW TO PLAY</h2>
+    <p id="instrucciones">Help Flappy avoid the obstacles. How far can you go?<br/></p>    
+  </div>
+  <div class=fila2x>
+    <img src="img\ayudaflappy.png"/>
+  </div>
+</div>
+  <script src="js/phaser.min.js"></script>
+  <script src="js/pajaros.min.js"></script>
+</body>
+
+</html>
