@@ -93,7 +93,7 @@
             if (juego.device.webAudio) {
                 gbs.isWebAudio = true;
                 //Load music
-                juego.load.audio('musica', 'assets/sonidos/PleasantCreekLoop.mp3', true);
+                juego.load.audio('musica', 'assets/sonidos/musica/PleasantCreekLoop.mp3', true);
 
                 //Load sounds
                 juego.load.audio('suelo', ['assets/sonidos/suelo.wav', 'assets/sonidos/suelo.mp3'], true);
