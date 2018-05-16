@@ -1,5 +1,6 @@
 # Flappy Tours
 Game based on the original idea of the famous Flappy Bird.
+Try it here: https://jjcapellan.github.io/FlappyTours/
 
 ## Used tools
 This game was developed using **Visual Studio Code**, **Mongoose** as server and **Chrome** for debugging the code.
