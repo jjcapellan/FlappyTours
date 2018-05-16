@@ -1,49 +1,49 @@
 /** 
-* @fileoverview Flappy Tours game
-*
-* @author Juan José Capellán
-* @version 1.0
-*/
+ * @fileoverview Flappy Tours game
+ *
+ * @author Juan José Capellán
+ * @version 1.0
+ */
 
-
-
-    
 
     //*********************** GLOBAL VARIABLES **********************************/
 
     var gbs = {
 
         // Best score
-        topScore:0,
+        topScore: 0,
         // It's true when actual score > topScore
-        newRecord:false,
+        newRecord: false,
         // Last game score
-        scorePreviousGame:0,
+        scorePreviousGame: 0,
         // True if there is webaudio
-        isWebAudio:false,
-        windowWidth:0,
-        windowHeight:0,
+        isWebAudio: false,
+        windowWidth: 0,
+        windowHeight: 0,
         // div used to calculate the width and height available in the browser
-        box:null,
+        box: null,
         // Height of the background sprite that represents the ground
-        groundHeight:0,
+        groundHeight: 0,
         // Height of the background sprite that represents the mountains
-        mountainsHeight:0,
+        mountainsHeight: 0,
         // Horizontal speed for each pair of pipes
         columnSpeed: -180,
         // X position for new pair of pipes
-        posXNewColumn:0,
+        posXNewColumn: 0,
         // Vertical velocity of the bird in the click event
-        birdImpulse:-350,
-        gameWidth:362,
-        gameHeight:480,
-        columnWidth:44,
-        antialias:true       
-    }
+        birdImpulse: -350,
+        gameWidth: 362,
+        gameHeight: 480,
+        columnWidth: 44,
+        antialias: true
+    };
+
+
 
     // Declaration of the game object (width, height, render, id html that contains it)
     var juego = new Phaser.Game(gbs.gameWidth, gbs.gameHeight, Phaser.CANVAS, 'div_juego', null, false, gbs.antialias);
 
+    
 
     // ******************************* STATES ******************************************************/
     // *********************************************************************************************/
@@ -53,7 +53,7 @@
         create: function () {
 
             // Scale definition
-            gbs.box=document.getElementById('div_juego');
+            gbs.box = document.getElementById('div_juego');
             var factorEscala = gbs.box.clientHeight / juego.height;
 
             juego.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
@@ -149,7 +149,7 @@
 
     }
 
-    /* State "inGame" : aquí es donde se puede jugar la partida */
+    /* State "inGame" : here we can play the game */
     var inGame = {
 
         create: function () {
@@ -169,7 +169,7 @@
             /* This solves collisions with the ground.*/
             juego.world.bounds.height = juego.height - 68;
 
-            //Iniciamos motor de físicas
+            //Physics engine initialiced
             juego.physics.startSystem(Phaser.Physics.ARCADE);
 
             if (gbs.isWebAudio) {
@@ -373,7 +373,7 @@
                 textopuntuacion = gbs.topScore;
                 document.getElementById('mensaje').innerHTML = 'NEW RECORD !!!';
             } else {
-                textopuntuacion = gbs.scorePreviousGame;            
+                textopuntuacion = gbs.scorePreviousGame;
             }
             document.getElementById('recuento').innerHTML = textopuntuacion;
             document.getElementById('bestscore').innerHTML = gbs.topScore;
@@ -389,14 +389,20 @@
         }
     }
 
-
-    /* Adding the states to game object (juego)*/    
+    /* Adding the states to game object (juego)*/
     juego.state.add('ajusteEscala', scaleAdjustment);
     juego.state.add('loading', loading);
     juego.state.add('inicio', inicio);
     juego.state.add('principal', inGame);
     juego.state.add('gameover', gameOver);
+
+    // Starts first state when window is loaded
+    window.onload=function(){
     juego.state.start('ajusteEscala');
+    };
+
+
+
 
 
     /************************** DOM BUTTONS **************************************/
