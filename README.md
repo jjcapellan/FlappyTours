@@ -2,6 +2,13 @@
 Game based on the original idea of the famous Flappy Bird.
 Try it here: https://jjcapellan.github.io/FlappyTours/
 
+## How to play
+Click or tap screen to fly and avoid hitting the pipes.
+
+## Screenshots
+![flappytoursscreenshot1](screenshots/fpl_screenshot1.png "Menu")
+![flappytoursscreenshot2](screenshots/fpl_screenshot2.png "Gameplay")
+
 ## Used tools
 This game was developed using **Visual Studio Code**, **Mongoose** as server and **Chrome** for debugging the code.
 Languages: html5, css and javascript.
