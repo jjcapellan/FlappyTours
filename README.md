@@ -6,8 +6,8 @@ Try it here: https://jjcapellan.github.io/FlappyTours/
 Click or tap screen to fly and avoid hitting the pipes.
 
 ## Screenshots
-![flappytoursscreenshot1](screenshots/fpl_screenshot1.png "Menu")
-![flappytoursscreenshot2](screenshots/fpl_screenshot2.png "Gameplay")
+![flappytoursscreenshot1](screenshots/flp_screenshot1.png "Menu")
+![flappytoursscreenshot2](screenshots/flp_screenshot2.png "Gameplay")
 
 ## Used tools
 This game was developed using **Visual Studio Code**, **Mongoose** as server and **Chrome** for debugging the code.
