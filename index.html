@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     }
     gtag('js', new Date());
 
-    gtag('config', 'UA-112934282-1');
+    gtag('config', 'UA-112934282-1', {'anonymize_ip': true });
   </script>
 
 </head>
@@ -48,7 +48,7 @@
     </div>
     <div class="fila2x">
       <img id="pato" class="centrado animacionUpDown" src="img/background-logo.png" />
-    </div>    
+    </div>
     <div id="botonera" style="margin-top:5%;">
       <button class="btn centrado" onclick="botonPlay();">PLAY</button>
       <button class="btn centrado" onclick="botonAyuda();">HELP</button>
@@ -86,36 +86,46 @@
       <p id="mensaje" class="centrado txtnegrosobreblanco"></p>
     </div>
   </div>
-<!-- Credits overlay -->
-<div id="creditos" onclick="cerrarlayer()" class="fullscreen" style="background-color:#00b698; text-align:center;">
-    
+  <!-- Credits overlay -->
+  <div id="creditos" onclick="cerrarlayer()" class="fullscreen" style="background-color:#00b698; text-align:center;">
+
     <div class="fila025x"></div>
     <div style="display:inline-block">
       <h2>DEVELOPED BY</h2>
-      <p>Juan Jos&eacute Capell&aacuten<br/>soycape@hotmail.com<br/></p>
+      <p>Juan Jos&eacute Capell&aacuten
+        <br/>soycape@hotmail.com
+        <br/>
+      </p>
       <h2>ATTRIBUTIONS</h2>
-        
-              <p>Backgroung music "Pleasant Creek" by Matthew Pablo.<!--(<a href="https://opengameart.org/users/matthewpablo" target="_blank">Source</a>)--><br/>
-                License: <!--<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">-->CC-BY-3.0</p>
-                <hr/>    
-                <p>Bird character (Flappy Duck sprite) by <!--<a href="https://bevouliin.com/" target="_blank">-->bevouliin.com.<br/>
-                License: <!--<a href="http://static.opengameart.org/OGA-BY-3.0.txt" target="_blank">-->OGA-BY-3.0</p>
-                <hr/>
-                <p>Powered by<!--<a href="http://phaser.io" target="_blank">--> Phaser.io</p>            
+
+      <p>Backgroung music "Pleasant Creek" by Matthew Pablo.
+        <!--(<a href="https://opengameart.org/users/matthewpablo" target="_blank">Source</a>)-->
+        <br/> License:
+        <!--<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">-->CC-BY-3.0</p>
+      <hr/>
+      <p>Bird character (Flappy Duck sprite) by
+        <!--<a href="https://bevouliin.com/" target="_blank">-->bevouliin.com.
+        <br/> License:
+        <!--<a href="http://static.opengameart.org/OGA-BY-3.0.txt" target="_blank">-->OGA-BY-3.0</p>
+      <hr/>
+      <p>Powered by
+        <!--<a href="http://phaser.io" target="_blank">-->Phaser.io</p>
     </div>
   </div>
 
-<!-- Help overlay -->
-<div id="help" class="fullscreen centrado" onclick="cerrarayuda()">
-  <div>
-    <br/>
-    <h2 id="title_instrucciones">HOW TO PLAY</h2>
-    <p id="instrucciones">Help Flappy avoid the obstacles. How far can you go?<br/></p>    
+  <!-- Help overlay -->
+  <div id="help" class="fullscreen centrado" onclick="cerrarayuda()">
+    <div>
+      <br/>
+      <h2 id="title_instrucciones">HOW TO PLAY</h2>
+      <p id="instrucciones">Help Flappy avoid the obstacles. How far can you go?
+        <br/>
+      </p>
+    </div>
+    <div class=fila2x>
+      <img src="img\ayudaflappy.png" />
+    </div>
   </div>
-  <div class=fila2x>
-    <img src="img\ayudaflappy.png"/>
-  </div>
-</div>
   <script src="js/phaser-ce/phaser.min.js"></script>
   <script src="js/pajaros.min.js"></script>
 </body>
