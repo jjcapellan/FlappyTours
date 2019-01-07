@@ -313,6 +313,10 @@
 
             this.birdCollided = true;
 
+            if("vibrate" in window.navigator) {
+                window.navigator.vibrate(100);
+            }
+
             juego.input.onDown.removeAll();
             if (gbs.isWebAudio) {
                 this.suelo.play();
